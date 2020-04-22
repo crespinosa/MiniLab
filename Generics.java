@@ -2,7 +2,7 @@
 /**
  * Write a description of class Generics here.
  *
- * @Christina, Mansi, and Anya
+ * @Christina, Mansi and Anya
  * @04/21/20
  */
 public abstract class Generics {
