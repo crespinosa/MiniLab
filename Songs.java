@@ -8,19 +8,19 @@ public class Songs extends Generics {
 	 * 
 	 */
 	public static final String type = "Songs";
-	public enum KeyType {combo, name, yearReleased, artist};
+	public enum KeyType {combo, songName, yearReleased, artist};
 	public static KeyType key = KeyType.combo;
-	private String name; 
+	private String songName; 
 	private int yearReleased; 
 	private String artist;
 	
 	/* constructor
 	 * 
 	 */
-	public Songs(String name, int yearReleased, String artist)
+	public Songs(String songName, int yearReleased, String artist)
 	{
 		this.setType(type);
-		this.name = name; 
+		this.songName = songName; 
 		this.yearReleased = yearReleased; 
 		this.artist = artist; 
 	}
@@ -33,8 +33,8 @@ public class Songs extends Generics {
 	{
 		String output="";
 		switch(key) {
-		case name:
-			output += this.name;
+		case songName:
+			output += this.songName;
 			break;
 		case yearReleased:
 			output += "000" + this.yearReleased;
@@ -45,7 +45,7 @@ public class Songs extends Generics {
 			break;
 		case combo:
 		default:
-			output += type + ": " + this.name  + ", " + this.artist + ", " + this.yearReleased; 
+			output += type + ": " + this.songName  + ", " + this.artist + ", " + this.yearReleased; 
 		}
 		return output;
 		
