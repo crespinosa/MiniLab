@@ -79,7 +79,7 @@ public class Sorts
     	slist[i] = smallest;
     	
     	}
-    return slist;
+    return slist; //change so I can commit
     
     }
     
