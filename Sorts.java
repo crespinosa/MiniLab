@@ -6,12 +6,13 @@
  */
 public class Sorts
 {
-    enum ListType {Standard, Bubble, Insert};
+    enum ListType {Standard, Bubble, Insert, Selection};
     ListType listType = ListType.Standard;
     
     private int[] list;
     private int[] blist; int bcompares = 0; int bswaps = 0;
     private int[] ilist; int icompares = 0; int iswaps = 0;
+    private int[] slist;
 
     /**
      * Constructor for objects of class isort
@@ -27,6 +28,8 @@ public class Sorts
         this.BubbleSort();
         ilist = list.clone();
         this.InsertionSort();
+        slist = list.clone();
+        this.SelectionSort();
     }
     
     public String toString() {
@@ -57,6 +60,27 @@ public class Sorts
         for (int i = 0; i < list.length; i++)
             output += " " + list[i];
         return output +" ]";    
+    }
+    
+    private int[] SelectionSort() {
+    	
+    	for (int i = 0; i < slist.length - 1; i++) {
+    		
+    		int minIndex = i;
+    		for (int j = i + 1; j < slist.length; j++) {
+    			
+    			if (slist[j] < slist[minIndex]) {
+    				minIndex = j;
+    			}
+    		}
+    	
+    	int smallest = slist[minIndex];
+    	slist[minIndex] = slist[i];
+    	slist[i] = smallest;
+    	
+    	}
+    return slist;
+    
     }
     
     private int[] BubbleSort() { 
@@ -127,6 +151,9 @@ public class Sorts
         
         // Insertion Sort
         is.listType = ListType.Insert;
+        System.out.println(is);
+        
+        is.listType = ListType.Selection;
         System.out.println(is);
     }
 }
