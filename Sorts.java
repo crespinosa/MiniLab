@@ -79,8 +79,7 @@ public class Sorts
     	slist[i] = smallest;
     	
     	}
-    return slist; //change so I can commit
-    
+    return slist;     
     }
     
     private int[] BubbleSort() { 
