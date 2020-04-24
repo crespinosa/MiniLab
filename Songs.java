@@ -56,12 +56,12 @@ public class Songs extends Generics {
 	 */
 	public static Generics[] songsData() {
 		Generics[] ad = { 
-				new Songs("Welcome to the Black Parade", 2006, "My Chemical Romance"),
-				new Songs("Amy", 2012, "Green Day"),
 				new Songs("10/10", 2019, "Rex Orange County"),
-				new Songs("Scared to Live", 2020, "The Weekend"),
+				new Songs("Amy", 2012, "Green Day"),
 				new Songs("My Own Worst Enemy", 1999, "Lit"),
-				new Songs("RACECAR", 2018, "Aries")
+				new Songs("RACECAR", 2018, "Aries"),
+				new Songs("Scared to Live", 2020, "The Weekend"),
+				new Songs("Welcome to the Black Parade", 2006, "My Chemical Romance")
 		};
 		return ad;
 	}
