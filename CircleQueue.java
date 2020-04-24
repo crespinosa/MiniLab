@@ -206,5 +206,42 @@ public class CircleQueue
     
   } 
   
+  public void selectionSort() {
+	  
+	  LinkedList node1 = headNode;
+	  
+	  { 
+	      LinkedList storeNode = node1; 
+	    
+	      // Traverse the List 
+	      while (storeNode != null) { 
+	          LinkedList min = storeNode; 
+	          LinkedList nodeNew = storeNode.getNext(); 
+	    
+	          // Traverse the unsorted sublist 
+	          while (nodeNew != null) { 
+	              if (min.getObject().toString().compareTo((String) nodeNew.getObject()) > 0) 
+	                  min = nodeNew; 
+	    
+	              nodeNew = nodeNew.getNext(); 
+	          } 
+	    
+	          // Swap Data 
+	          Object x = storeNode.getObject(); 
+	          storeNode.setObject(min.getObject()); 
+	          x = min.getObject();
+	          storeNode = storeNode.getNext(); 
+	      } 
+	  } 
+	    
+	  
+	  
+	  
+	  
+	  
+	  
+  }
+  
+  
 }
 

@@ -12,7 +12,7 @@ public class Sorts
     private int[] list;
     private int[] blist; int bcompares = 0; int bswaps = 0;
     private int[] ilist; int icompares = 0; int iswaps = 0;
-    private int[] slist;
+    private int[] slist; int scompares = 0; int sswaps = 0;
 
     /**
      * Constructor for objects of class isort
@@ -47,13 +47,29 @@ public class Sorts
                   + " Swaps: " + this.bswaps);
                 list = this.blist;
                 break;
-            case Insert:
+            
+         /*   case Insert:
+            	System.out.println("Insertions Sort -- "
+                        + " Operations: " + (this.icompares + this.iswaps)
+                        + " Compares: " + this.icompares
+                        + " Swaps: " + this.iswaps);
+                      list = this.ilist;   */
+            	
+            case Selection:
+            	System.out.println("Selection Sort -- "
+            	  + " Operation: " + (this.scompares + this.sswaps)
+            	  + " Compares: " + this.scompares
+            	  + " Swaps: " + this.sswaps);
+            	list = this.slist;
+            	break;
+            	
             default:
                 System.out.println("Insertions Sort -- "
                   + " Operations: " + (this.icompares + this.iswaps)
                   + " Compares: " + this.icompares
                   + " Swaps: " + this.iswaps);
                 list = this.ilist;
+                break;
         }
                 
         String output = "[";
@@ -64,13 +80,16 @@ public class Sorts
     
     private int[] SelectionSort() {
     	
+   
     	for (int i = 0; i < slist.length - 1; i++) {
     		
     		int minIndex = i;
     		for (int j = i + 1; j < slist.length; j++) {
     			
+    			this.scompares++;
     			if (slist[j] < slist[minIndex]) {
     				minIndex = j;
+    				this.sswaps++;
     			}
     		}
     	
@@ -150,7 +169,7 @@ public class Sorts
         
         // Insertion Sort
         is.listType = ListType.Insert;
-        System.out.println(is);
+        System.out.println(is); 
         
         is.listType = ListType.Selection;
         System.out.println(is);
