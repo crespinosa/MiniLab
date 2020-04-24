@@ -12,7 +12,7 @@ public class ArrayList
     
     public ArrayList()
     {
-        array = new Object [2]; //creating new array of size 2
+        array = new Object [100]; //creating new array of size 100
         size = 0;
     }
     public ArrayList(int length)
