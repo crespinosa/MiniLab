@@ -54,7 +54,7 @@ public class Alphabet extends Generics {
 	{
 		Generics[] ad = alphabetData();
 		for(Generics a : ad)
-			ConsoleMethods.print("" + a);
+			ConsoleMethods.print(" " + a);
 	}
 	
 }
