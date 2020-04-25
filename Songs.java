@@ -51,7 +51,7 @@ public class Songs extends Generics {
 		
 	}
 	
-	/* Initialize Animal data
+	/* Initialize Songs data
 	 * 
 	 */
 	public static Generics[] songsData() {
@@ -66,7 +66,7 @@ public class Songs extends Generics {
 		return ad;
 	}
 	
-	/* main to test Animal class
+	/* main to test Song class
 	 * 
 	 */
 	public static void main(String[] args)
